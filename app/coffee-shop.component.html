@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<h2>My Coffees</h2>
+<ul class="coffees">
+    <li *ngFor="#coffee of coffees"
+        (click)="onSelect(coffee)"
+        [class.selected]="coffee === selectedCoffee">
+        <span class="badge">{{coffee.id}}</span> {{coffee.name}}
+    </li>
+</ul>
+<div *ngIf="selectedCoffee">
+    <h2>
+        {{selectedCoffee.name | uppercase}} is my coffee
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>

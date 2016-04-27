@@ -1,0 +1,13 @@
+<div *ngIf="coffee">
+    <h2>{{coffee.name}} details!</h2>
+    <div><label>id: </label>{{coffee.id}}</div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="coffee.name" placeholder="Name"/>
+    </div>
+    <div>
+        <label>price: </label>
+        <input [(ngModel)]="coffee.price" placeholder="Price"/>
+    </div>
+    <button (click)="goBack()">Back</button>
+</div>
